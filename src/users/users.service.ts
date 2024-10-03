@@ -11,4 +11,7 @@ export class UsersServices {
   findAll(): User[] {
     return this.users;
   }
+  findOne(id: number): User | undefined {
+    return this.users.find((user) => user.id === id);
+  }
 }
